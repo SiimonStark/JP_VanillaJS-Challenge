@@ -11,40 +11,46 @@
   <title>IdeaBox Redux</title>
 </head>
 <body>
-  <header>
+  <nav>
     <section class="top">
-      <h1>IdeaBox Redux</h1>
-      <h4>Filter Starred Ideas</h4>
-      <button id="find-fave">
-        Show Starred Ideas
-      </button>
+      <div class="title-name">
+        <h1>IdeaBox Redux</h1>
+      </div>
+      <section class="starFilter--container">
+        <h4>Filter Starred Ideas</h4>
+        <button id="find-fave">
+          Show Starred Ideas
+        </button>
+      </section>
     </section>
     <section class="filter">
-      <h4>Filter by Quality</h4>
-      <button id="swill" class="filt--btn">
-        Swill
-      </button>
-      <button id="plausible" class="filt--btn">
-        Plausible
-      </button>
-      <button id="genius" class="filt--btn">
-        Genius
-      </button>
+      <section class="preset-qual">
+        <h4>Filter by Quality</h4>
+        <button id="swill" class="filt--btn">
+          Swill
+        </button>
+        <button id="plausible" class="filt--btn">
+          Plausible
+        </button>
+        <button id="genius" class="filt--btn">
+          Genius
+        </button>
+      </section>
+      <form class="add-filter">
+        <h4 class="new-filt">New Quality</h4>
+        <input 
+          id="input-filt" 
+          type="text" 
+          maxlength="9" />
+        <input 
+          id="submit-filt" 
+          type="submit" 
+          disabled 
+          value="Add New Quality" />
+      </form>
     </section>
-    <form class="add-filter">
-      <h4 class="new-filt">New Quality</h4>
-      <input 
-        id="input-filt" 
-        type="text" 
-        maxlength="9" />
-      <input 
-        id="submit-filt" 
-        type="submit" 
-        disabled 
-        value="Add New Quality" />
-    </form>
-  </header>
-  <section class="control-form">
+  </nav>
+  <header class="control-form">
     <form class="add-idea">
       <h2>Title</h2>
       <input 
@@ -55,7 +61,7 @@
       <input 
         id="input-body" 
         type="text" 
-        maxlength="50" />
+        maxlength="150" />
       <input 
         id="submit-idea" 
         type="submit"
@@ -71,31 +77,9 @@
         type="text" 
         placeholder="Search Ideas" />
     </form>
-  </section>
+  </header>
   <main class="card--container">
-    <article id="DATENOW" class="card">
-      <section class="card--header">
-        <button class="card__fave">
-          <i class="fas fa-star"></i>
-        </button>
-        <button class="card__delete">
-          <i class="far fa-window-close"></i>
-        </button>
-      </section>
-      <article class="card--content">
-        <h3 class="card__title">Title</h3>
-        <p class="card__body">Body</p>
-      </article>
-      <section class="card--footer">
-        <button class="vote__up">
-          <i class="fas fa-thumbs-up"></i>
-        </button>
-        <h4>Quality: {Swill}</h4>
-        <button class="vote__down">
-          <i class="fas fa-thumbs-down"></i>
-        </button>
-      </section>
-    </article>
+    
   </main>
   <script src="idea.js"></script>
   <script src="main.js"></script>
