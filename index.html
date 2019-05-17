@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="normalize.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
   <title>IdeaBox Redux</title>
 </head>
 <body>
@@ -12,13 +15,21 @@
     <section class="top">
       <h1>IdeaBox Redux</h1>
       <h4>Filter Starred Ideas</h4>
-      <button>Show Starred Ideas</button>
+      <button id="find-fave">
+        Show Starred Ideas
+      </button>
     </section>
     <section class="filter">
       <h4>Filter by Quality</h4>
-      <button id="swill" class="filt--btn">Swill</button>
-      <button id="plausible" class="filt--btn">Plausible</button>
-      <button id="genius" class="filt--btn">Genius</button>
+      <button id="swill" class="filt--btn">
+        Swill
+      </button>
+      <button id="plausible" class="filt--btn">
+        Plausible
+      </button>
+      <button id="genius" class="filt--btn">
+        Genius
+      </button>
     </section>
     <form class="add-filter">
       <h4 class="new-filt">New Quality</h4>
@@ -35,26 +46,38 @@
       <input id="submit-idea" type="submit" value="Save" />
     </form>
     <form class="search__idea">
-      <button>?</button>
+      <button id="submit-search">
+        <i class="fas fa-search"></i>
+      </button>
       <input id="input-search" type="text" placeholder="Search Ideas" />
     </form>
   </section>
   <main class="card--container">
     <article id="DATENOW" class="card">
       <section class="card--header">
-        <button class="card__fave">Star</button>
-        <button class="card__delete">X</button>
+        <button class="card__fave">
+          <i class="fas fa-star"></i>
+        </button>
+        <button class="card__delete">
+          <i class="far fa-window-close"></i>
+        </button>
       </section>
       <article class="card--content">
         <h3 class="card__title">Title</h3>
         <p class="card__body">Body</p>
       </article>
       <section class="card--footer">
-        <button class="vote__up">^</button>
+        <button class="vote__up">
+          <i class="fas fa-thumbs-up"></i>
+        </button>
         <h4>Quality: {Swill}</h4>
-        <button class="vote__down">v</button>
+        <button class="vote__down">
+          <i class="fas fa-thumbs-down"></i>
+        </button>
       </section>
     </article>
   </main>
+  <script src="idea.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
