@@ -24,29 +24,31 @@
       </section>
     </section>
     <section class="filter">
-      <h4>Filter by Quality</h4>
-      <button id="swill" class="filt--btn">
-        Swill
-      </button>
-      <button id="plausible" class="filt--btn">
-        Plausible
-      </button>
-      <button id="genius" class="filt--btn">
-        Genius
-      </button>
+      <section class="preset-qual">
+        <h4>Filter by Quality</h4>
+        <button id="swill" class="filt--btn">
+          Swill
+        </button>
+        <button id="plausible" class="filt--btn">
+          Plausible
+        </button>
+        <button id="genius" class="filt--btn">
+          Genius
+        </button>
+      </section>
+      <form class="add-filter">
+        <h4 class="new-filt">New Quality</h4>
+        <input 
+          id="input-filt" 
+          type="text" 
+          maxlength="9" />
+        <input 
+          id="submit-filt" 
+          type="submit" 
+          disabled 
+          value="Add New Quality" />
+      </form>
     </section>
-    <form class="add-filter">
-      <h4 class="new-filt">New Quality</h4>
-      <input 
-        id="input-filt" 
-        type="text" 
-        maxlength="9" />
-      <input 
-        id="submit-filt" 
-        type="submit" 
-        disabled 
-        value="Add New Quality" />
-    </form>
   </nav>
   <header class="control-form">
     <form class="add-idea">

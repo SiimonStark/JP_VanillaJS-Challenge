@@ -42,7 +42,8 @@ nav {
   font-weight: lighter;
 }
 
-#find-fave {
+#find-fave,
+#submit-filt {
   width: 100%;
   padding: 5px;
   font-size: 24px;
@@ -50,6 +51,42 @@ nav {
   color: white;
   border: none;
   margin-top: 10px;
+}
+
+.filter {
+  border-bottom: #353567 solid 3px;
+  height: 360px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+}
+
+.filter input,
+.filter button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.filter button {
+  height: 40px;
+  text-align: left;
+  color: white;
+  background: none;
+  border: none;
+  font-size: 22px;
+  font-weight: lighter;
+  cursor: pointer;
+}
+
+#input-filt {
+  height: 35px;
+  margin-bottom: 10px;
+}
+
+.filterBtn--true {
+  border-left: #f58e72 solid 10px;
+  background-color: #D14119;
 }
 
 header {
