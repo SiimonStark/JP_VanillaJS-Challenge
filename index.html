@@ -11,13 +11,17 @@
   <title>IdeaBox Redux</title>
 </head>
 <body>
-  <header>
+  <nav>
     <section class="top">
-      <h1>IdeaBox Redux</h1>
-      <h4>Filter Starred Ideas</h4>
-      <button id="find-fave">
-        Show Starred Ideas
-      </button>
+      <div class="title-name">
+        <h1>IdeaBox Redux</h1>
+      </div>
+      <section class="starFilter--container">
+        <h4>Filter Starred Ideas</h4>
+        <button id="find-fave">
+          Show Starred Ideas
+        </button>
+      </section>
     </section>
     <section class="filter">
       <h4>Filter by Quality</h4>
@@ -43,8 +47,8 @@
         disabled 
         value="Add New Quality" />
     </form>
-  </header>
-  <section class="control-form">
+  </nav>
+  <header class="control-form">
     <form class="add-idea">
       <h2>Title</h2>
       <input 
@@ -55,7 +59,7 @@
       <input 
         id="input-body" 
         type="text" 
-        maxlength="50" />
+        maxlength="150" />
       <input 
         id="submit-idea" 
         type="submit"
@@ -71,7 +75,7 @@
         type="text" 
         placeholder="Search Ideas" />
     </form>
-  </section>
+  </header>
   <main class="card--container">
     
   </main>

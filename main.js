@@ -59,6 +59,7 @@ window.onload = () => {
     });
   };
   renderContainerCards(cards);
+  console.log(cards)
 ;}
 // ========================END========================
 // ****************** Nav Funcs ******************
@@ -129,13 +130,13 @@ const renderContainerCards = (list) => {
         <button id=${card.id} class="vote__up">
           <i id=${card.id} class="fas fa-thumbs-up vote__up"></i>
         </button>
-        <h4>Quality: ${card.quality}</h4>
+        <h5>Quality: ${card.quality}</h5>
         <button id=${card.id} class="vote__down">
           <i id=${card.id} class="fas fa-thumbs-down vote__down"></i>
         </button>
       </section>
     </article>`
-  ))
+  )).join('');
 } 
 // ========================END========================
 // ****************** Card Funcs ******************
@@ -147,19 +148,15 @@ const faveCard = (target) => {
   }
 }
 const deleteCard = ({id}) => {
-  console.log(cards)
+  let cardId = parseInt(id);
   let remainingCards = cards.reduce((acc, card) => {
-    // card.id === parseInt(id)
-    if (card.id === parseInt(id)) {
-      card.deleteFromLocal(card.id, cards)
-    } else {
-      acc.push(card)
-    }
+    card.id !== cardId
+      ? acc.push(card)
+      : card.deleteFromLocal(cardId, cards)
     return acc;
   }, []);
   cards = remainingCards;
   renderContainerCards(cards);
-  console.log('newList', remainingCards)
 }
 const changeQuality = (target) => {
 
